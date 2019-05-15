@@ -6,7 +6,7 @@
         {
             Percentile = 99;
         }
-        public Student(int id, string name, string department, int percentile): base(id, name, department)
+        public Student(int id, string name = "Jagu", string department = "CSE", int percentile = 99): base(id, name, department)
         {
             Percentile = percentile;
         }
@@ -15,9 +15,13 @@
         {
             return Percentile >= 0 && Percentile <= 100;
         }
+        public override string GetName()
+        {
+            return $"Student Name is: {Name}";
+        }
         public new bool IsIdHasPositiveValue()
         {
-            return Id > 0;
+            return Id > 100000;
         }
     }
 }

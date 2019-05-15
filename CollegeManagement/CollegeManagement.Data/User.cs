@@ -1,6 +1,6 @@
 ﻿namespace CollegeManagement.Data
 {
-    public class User
+    public abstract class User
     {
         public User()
         {
@@ -19,7 +19,8 @@
         public int Id { get; set; }
         public string Name { get; set; }
         public string Department { get; set; }
-        public bool IsIdHasPositiveValue()
+        public abstract string GetName();  
+        public virtual bool IsIdHasPositiveValue()
         {
             return Id >= 0;
         }
