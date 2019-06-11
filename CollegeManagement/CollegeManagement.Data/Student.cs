@@ -23,5 +23,10 @@
         {
             return Id > 100000;
         }
+        public static int PassingMark { get; set; }
+        public static bool HasPassed(int percentile)
+        {
+            return percentile >= 40;
+        }
     }
 }

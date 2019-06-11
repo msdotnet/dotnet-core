@@ -1,4 +1,5 @@
 ﻿using CollegeManagement.Data;
+using CollegeManagement.Data.Extensions;
 using System;
 
 
@@ -9,7 +10,7 @@ namespace CollegeManagement
         static void Main(string[] args)
         {
             var teacher = new Teacher(0,"Sateesh"); 
-            var student = new Student(0, department: "ECE");
+            var student = new Student(0, department: "ECE", percentile:100);
             User user1 = new Teacher(0);
             User user2 = new Student(0);
 
@@ -21,6 +22,10 @@ namespace CollegeManagement
 
             Console.WriteLine($"Between 1000001 + : {user2.IsIdHasPositiveValue()}");
 
+            Console.WriteLine($"Has Passed : {Student.HasPassed(45)}");
+            Console.WriteLine($"Who is the Topper: {ExamUtility.Topper(student)}");
+            Console.WriteLine($"Teacher's Department is: {teacher.GetDepartment()}");
+            Console.WriteLine($"Teacher's Department is: {StudentExtensions.GetDepartment(teacher)}");
 
             Console.WriteLine($"{teacher.GetName()}");
             Console.WriteLine($"{student.GetName()}");

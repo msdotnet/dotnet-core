@@ -6,10 +6,10 @@
         {
             Id = 100;
             Name = "Avishek";
-            Department = "CSE";
+            Department = Department.CSE;
         }
 
-        public User(int id, string name, string department)
+        public User(int id, string name, Department department)
         {
             Id = id;
             Name = name;
@@ -18,7 +18,7 @@
 
         public int Id { get; set; }
         public string Name { get; set; }
-        public string Department { get; set; }
+        public Department Department { get; set; }
         public abstract string GetName();  
         public virtual bool IsIdHasPositiveValue()
         {
