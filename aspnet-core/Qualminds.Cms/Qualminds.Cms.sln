@@ -3,7 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.329
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Qualminds.Cms.UI", "Qualminds.Cms.UI\Qualminds.Cms.UI.csproj", "{750A47AB-B59E-4941-AE6D-F9A0A3752347}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{4FE8A686-0A9E-4F05-88B0-9B8F04C626AB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{D4084F09-906E-4E74-8042-A36560A430C7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Qualminds.Cms.Api", "Qualminds.Cms.Api\Qualminds.Cms.Api.csproj", "{48B1EA97-7733-4782-A6D3-C3DA2348D882}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Qualminds.Cms.Infrastructure", "Qualminds.Cms.Infrastructure\Qualminds.Cms.Infrastructure.csproj", "{0CA84306-75BF-41CA-A002-36D0FFF4984F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{AD8AB7DE-2F41-4052-B01D-E643AD619626}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Qualminds.Cms.Core", "Qualminds.Cms.Core\Qualminds.Cms.Core.csproj", "{06E1B19D-7A15-43E7-9399-F0C86B0A36C7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,13 +21,26 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{750A47AB-B59E-4941-AE6D-F9A0A3752347}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{750A47AB-B59E-4941-AE6D-F9A0A3752347}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{750A47AB-B59E-4941-AE6D-F9A0A3752347}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{750A47AB-B59E-4941-AE6D-F9A0A3752347}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48B1EA97-7733-4782-A6D3-C3DA2348D882}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48B1EA97-7733-4782-A6D3-C3DA2348D882}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48B1EA97-7733-4782-A6D3-C3DA2348D882}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48B1EA97-7733-4782-A6D3-C3DA2348D882}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0CA84306-75BF-41CA-A002-36D0FFF4984F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CA84306-75BF-41CA-A002-36D0FFF4984F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0CA84306-75BF-41CA-A002-36D0FFF4984F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0CA84306-75BF-41CA-A002-36D0FFF4984F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06E1B19D-7A15-43E7-9399-F0C86B0A36C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06E1B19D-7A15-43E7-9399-F0C86B0A36C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06E1B19D-7A15-43E7-9399-F0C86B0A36C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06E1B19D-7A15-43E7-9399-F0C86B0A36C7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{48B1EA97-7733-4782-A6D3-C3DA2348D882} = {4FE8A686-0A9E-4F05-88B0-9B8F04C626AB}
+		{0CA84306-75BF-41CA-A002-36D0FFF4984F} = {D4084F09-906E-4E74-8042-A36560A430C7}
+		{06E1B19D-7A15-43E7-9399-F0C86B0A36C7} = {AD8AB7DE-2F41-4052-B01D-E643AD619626}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {60AE69E2-B9EE-4BE8-8D06-C65F61FC1AD1}
