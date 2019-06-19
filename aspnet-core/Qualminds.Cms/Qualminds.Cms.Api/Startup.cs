@@ -33,7 +33,7 @@ namespace Qualminds.Cms.Api
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddTransient<ITeacherRepository, TeacherRepository>();
-            services.AddDbContext<CmsDbContext>(opt => opt.UseInMemoryDatabase("CmsDbContext"));
+            services.AddDbContext<CmsDbContext>(opt => opt.UseSqlServer(Configuration.GetConnectionString("CmsDbContext")));
             // Register the Swagger generator, defining 1 or more Swagger documents
             services.AddSwaggerGen(c =>
             {
@@ -42,7 +42,6 @@ namespace Qualminds.Cms.Api
                 var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
                 var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
                 c.IncludeXmlComments(xmlPath);
-
             });
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);

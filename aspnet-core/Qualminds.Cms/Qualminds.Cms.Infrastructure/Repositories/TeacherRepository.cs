@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Qualminds.Cms.Core.Contracts.Repositories;
-using Qualminds.Cms.Core.Models;
+using Qualminds.Cms.Core.Entities;
 using Qualminds.Cms.Infrastructure.Data;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,7 +17,7 @@ namespace Qualminds.Cms.Infrastructure.Repositories
             _dbContext = dbContext;
             if(_dbContext.Teachers.Count() <= 0)
             {
-                _dbContext.Teachers.Add(new Teacher { Name = "Indrani", Department = "CSE" });
+                _dbContext.Teachers.Add(new Teacher { Name = "Indrani", DepartmentId = 1 });
                 _dbContext.SaveChanges();
             }
         }

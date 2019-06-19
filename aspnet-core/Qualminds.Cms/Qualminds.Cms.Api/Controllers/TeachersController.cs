@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Qualminds.Cms.Core.Contracts.Repositories;
-using Qualminds.Cms.Core.Models;
+using Qualminds.Cms.Core.Entities;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;

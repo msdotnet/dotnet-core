@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using Qualminds.Cms.Core.Models;
+using Qualminds.Cms.Core.Entities;
 
 namespace Qualminds.Cms.Core.Contracts.Repositories
 {
