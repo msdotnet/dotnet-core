@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace Qualminds.Cms.Api.Controllers
 {
+    [Produces("application/json")]
     [Route("api/[controller]")]
     [ApiController]
     public class TeachersController : ControllerBase
@@ -35,9 +36,20 @@ namespace Qualminds.Cms.Api.Controllers
         }
 
         // POST: api/Teachers
+        /// <summary>
+        /// Creates a teacher record 
+        /// </summary>
+        /// <param name="teacher"></param>
+        ///<response code="201">Returns the newly created item</response>
+        /// <response code="400">If the item is null</response> 
+        /// <returns>Returns the location and the data</returns>
         [HttpPost]
+        [ProducesResponseType(201)]
+        [ProducesResponseType(400)]
         public async Task<ActionResult> Post([FromBody] Teacher teacher)
         {
+            if (!ModelState.IsValid)
+                return BadRequest();
             var teacherCreated = await _teacherRepository.Add(teacher);
             return CreatedAtAction(nameof(Get), new { id = teacherCreated.Id }, teacherCreated);
         }
